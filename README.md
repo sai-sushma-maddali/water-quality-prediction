@@ -18,6 +18,19 @@ The project is part of the **DATA 245 – Machine Learning** course at *San Jos�
 * Build the foundation for **Water Quality Index (WQI)** computation and predictive modeling using ML.
 
 ---
+## **Live Demo**
+
+https://water-quality-prediction-ca-dwr.streamlit.app/
+
+---
+## **Demo Videos**
+The demo videos for this project are packaged as downloadable artifacts and attached to each GitHub Release. These videos provide a walkthrough of the UI, model predictions, and Augmented Reality demo.
+You can find them under:
+
+**GitHub → Repository → Releases → Assets**
+
+
+---
 
 ## **Exploratory Data Analysis (EDA)**
 
@@ -121,14 +134,7 @@ California Department of Water Resources (DWR) –
 https://data.ca.gov/dataset/water-quality-data
 
 ---
-## **Demo Videos**
-The demo videos for this project are packaged as downloadable artifacts and attached to each GitHub Release.  
-You can find them under:
 
-**GitHub → Repository → Releases → Assets**
-
-These videos provide a walkthrough of the UI, model predictions, and Augmented Reality demo.
----
 
 ## **References**
 
