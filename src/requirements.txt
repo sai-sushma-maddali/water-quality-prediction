@@ -1,8 +1,8 @@
 numpy==2.1.3
 scikit-learn==1.5.2
-imbalanced-learn==0.13.2
+imbalanced-learn==0.14.0
 
-streamlit
+streamlit==1.52.2
 pandas
 joblib
 matplotlib
