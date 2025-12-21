@@ -80,8 +80,24 @@ The project is part of the **DATA 245 – Machine Learning** course at *San Jos�
 ```
 water-quality-prediction/
 │
+├── documentation/
+│   ├── Intermediate-project-status.pdf
+│   ├── Predictive Modeling for Water Quality Assessment - project proposal.pdf
+│   ├── Predictive_Modeling_for_Water_Quality_Assessment.pdf
+│   ├── Water_Quality_Prediction-final-report.pdf
+│   ├── Water-quality-prediction-slides.pdf
 ├── notebooks/                     # Jupyter notebooks for EDA and modeling
+│   ├── Water Quality Testing.ipynb
+│   ├── water_quality_analysis_ed_v2.ipynb
 │   ├── water_quality_analysis_eda.ipynb
+│   ├── water_quality_analysis_model_training.ipynb
+├── src/
+│   ├── app.py
+│   ├── label_encoder.pkl
+│   ├── processed_dataset_WQ.pkl
+│   ├── requirements.txt
+│   ├── water_quality_testing_xgb.py
+│   ├── wqi_xgb_pipeline.pkl
 ├── README.md                      # Project overview
 
 ```
