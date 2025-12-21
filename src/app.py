@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
+import os
 
 # =========================================================
 # PAGE CONFIG
@@ -16,8 +17,13 @@ st.set_page_config(
 # CONSTANTS & UTIL FUNCTIONS
 # =========================================================
 
-MODEL_PATH = "wqi_xgb_pipeline.pkl"
-LE_PATH = "label_encoder.pkl"
+# MODEL_PATH = "wqi_xgb_pipeline.pkl"
+# LE_PATH = "label_encoder.pkl"
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "wqi_xgb_pipeline.pkl")
+LE_PATH = os.path.join(BASE_DIR, "label_encoder.pkl")
+
 
 NUMERIC_FEATURES = [
     "DissolvedOxygen_mg/L",
@@ -276,7 +282,5 @@ elif page == "Single Sample Prediction":
             st.bar_chart(prob_df.T)
 
 
-# =========================================================
-# FORECASTING PLACEHOLDER
-# =========================================================
+
 
