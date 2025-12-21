@@ -238,48 +238,45 @@ elif page == "ML Predictions":
         - **Poor**: Water quality is unsafe for direct use and may indicate pollution.
         """)
 
-# =========================================================
-# SINGLE SAMPLE PAGE
-# =========================================================
 
-elif page == "Single Sample Prediction":
-    st.markdown("<h2 style='text-align:center;'>🧪 Single Sample Prediction</h2>",
-                unsafe_allow_html=True)
+# elif page == "Single Sample Prediction":
+#     st.markdown("<h2 style='text-align:center;'>🧪 Single Sample Prediction</h2>",
+#                 unsafe_allow_html=True)
 
-    st.write("A compact form to quickly classify water quality from a single sample.")
+#     st.write("A compact form to quickly classify water quality from a single sample.")
 
-    st.markdown("---")
+#     st.markdown("---")
 
-    with st.form("single_form"):
-        sample_date = st.date_input("Sample Date")
-        station_type = st.selectbox("Station Type",
-                                    ["River", "Lake", "Groundwater", "Reservoir", "Other"])
+#     with st.form("single_form"):
+#         sample_date = st.date_input("Sample Date")
+#         station_type = st.selectbox("Station Type",
+#                                     ["River", "Lake", "Groundwater", "Reservoir", "Other"])
 
-        col1, col2 = st.columns(2)
-        with col1:
-            do = st.number_input("Dissolved Oxygen (mg/L)", 0.0, 20.0, 8.0, 0.1)
-            ph = st.number_input("pH", 0.0, 14.0, 7.0, 0.1)
-            temp = st.number_input("Temperature (°C)", -5.0, 50.0, 20.0, 0.5)
+#         col1, col2 = st.columns(2)
+#         with col1:
+#             do = st.number_input("Dissolved Oxygen (mg/L)", 0.0, 20.0, 8.0, 0.1)
+#             ph = st.number_input("pH", 0.0, 14.0, 7.0, 0.1)
+#             temp = st.number_input("Temperature (°C)", -5.0, 50.0, 20.0, 0.5)
 
-        with col2:
-            sc = st.number_input("Conductivity (µS/cm)", 0.0, 20000.0, 400.0, 10.0)
-            turb = st.number_input("Turbidity (NTU)", 0.0, 1000.0, 5.0, 0.1)
-            depth = st.number_input("Depth (m)", 0.0, 100.0, 1.0, 0.1)
+#         with col2:
+#             sc = st.number_input("Conductivity (µS/cm)", 0.0, 20000.0, 400.0, 10.0)
+#             turb = st.number_input("Turbidity (NTU)", 0.0, 1000.0, 5.0, 0.1)
+#             depth = st.number_input("Depth (m)", 0.0, 100.0, 1.0, 0.1)
 
-        lat = st.number_input("Latitude", -90.0, 90.0, 37.5, 0.01)
-        lon = st.number_input("Longitude", -180.0, 180.0, -121.9, 0.01)
+#         lat = st.number_input("Latitude", -90.0, 90.0, 37.5, 0.01)
+#         lon = st.number_input("Longitude", -180.0, 180.0, -121.9, 0.01)
 
-        submit = st.form_submit_button("Predict")
+#         submit = st.form_submit_button("Predict")
 
-    if submit:
-        label, code, proba = predict_single_sample(sample_date, station_type, do, ph, turb, sc, temp, depth, lat, lon)
+#     if submit:
+#         label, code, proba = predict_single_sample(sample_date, station_type, do, ph, turb, sc, temp, depth, lat, lon)
 
-        st.success(f"### Predicted WQI Class: **{label}**")
+#         st.success(f"### Predicted WQI Class: **{label}**")
 
-        if proba:
-            st.write("### Probability Breakdown")
-            prob_df = pd.DataFrame(proba, index=["Probability"])
-            st.bar_chart(prob_df.T)
+#         if proba:
+#             st.write("### Probability Breakdown")
+#             prob_df = pd.DataFrame(proba, index=["Probability"])
+#             st.bar_chart(prob_df.T)
 
 
 
