@@ -1,6 +1,4 @@
 
----
-
 # **Water Quality Prediction Using Machine Learning**
 
 ## **Project Overview**
@@ -106,6 +104,14 @@ California Department of Water Resources (DWR) –
 
 https://data.ca.gov/dataset/water-quality-data
 
+---
+## **Demo Videos**
+The demo videos for this project are packaged as downloadable artifacts and attached to each GitHub Release.  
+You can find them under:
+
+**GitHub → Repository → Releases → Assets**
+
+These videos provide a walkthrough of the UI, model predictions, and Augmented Reality demo.
 ---
 
 ## **References**

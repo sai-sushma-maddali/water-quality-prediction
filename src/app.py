@@ -123,39 +123,49 @@ def predict_single_sample(sample_date, station_type, do, ph, turb, sc, temp, dep
 st.sidebar.title("💧 Navigation")
 page = st.sidebar.radio(
     "Go to",
-    ("Home", "ML Predictions", "Forecasting Predictions")
+    ("Home", "ML Predictions")
 )
 
 # =========================================================
 # HOME PAGE
 # =========================================================
 if page == "Home":
-    st.markdown("<h1 style='text-align:center;'>Water Quality Prediction Using Machine Learning</h1>",
-                unsafe_allow_html=True)
 
-    st.markdown("<h3 style='text-align:center;'>A data-driven approach to modeling and predicting water quality across California</h3>",
-                unsafe_allow_html=True)
+    st.markdown("""
+<div style='font-size:24px; font-weight:bold; color:#1f77b4'>
+🌊 Water Quality Prediction Using Machine Learning
+</div>
 
-    st.markdown("---")
+<div style='font-size:16px; font-style:italic; margin-bottom:20px'>
+A data-driven approach to modeling and predicting water quality across California
+</div>
 
-    st.write("""
-    This tool predicts Water Quality Index (WQI) based on physicochemical parameters collected from the California Department 
-    of Water Resources. It helps identify water quality trends and supports sustainable water resource management.
+<div style='font-size:15px'>
+This application provides an interactive tool for predicting water quality using <b>machine learning models</b> trained on publicly available field data from the <b>California Department of Water Resources (DWR)</b>.
+</div>
 
-    This demo allows you to explore water quality parameters, visualize trends, and generate WQI predictions based on physicochemical indicators such as pH, Dissolved Oxygen, Turbidity, Conductivity, and Temperature.
+<div style='font-size:16px; margin-top:20px'>
+<h4>🔍 Key Parameters</h4>
+<ul>
+  <li>Dissolved Oxygen</li>
+  <li>pH</li>
+  <li>Turbidity</li>
+  <li>Conductivity</li>
+  <li>Temperature</li>
+</ul>
 
-    **Key Features**
-             
-        •	Interactive EDA and parameter visualization
+<h4>🏆 Classification Categories</h4>
+<ul>
+  <li>✅ Good</li>
+  <li>⚠️ Moderate</li>
+  <li>❌ Poor</li>
+</ul>
 
-        •	Cleaned and standardized multi-parameter datasets
-
-        •	ML-based WQI prediction
-
-        •	Insightful model metrics and output graphs
-
-
-    """)
+<blockquote>
+This project supports <b>UN Sustainable Development Goal 6</b> by promoting sustainable and data-driven water quality monitoring.
+</blockquote>
+</div>
+""", unsafe_allow_html=True)
 
     # st.markdown("---")
     # col1, col2, col3 = st.columns(3)
@@ -269,17 +279,4 @@ elif page == "Single Sample Prediction":
 # =========================================================
 # FORECASTING PLACEHOLDER
 # =========================================================
-
-elif page == "Forecasting Predictions":
-    st.markdown("<h2 style='text-align:center;'>📈 Forecasting Predictions (Coming Soon)</h2>",
-                unsafe_allow_html=True)
-
-    st.info("""
-    This section will include:
-    - Time-series forecasting of DO, pH, Temperature  
-    - Seasonal/Trend analysis  
-    - Predicting future WQI trends  
-
-    (Planned for future enhancement.)
-    """)
 
